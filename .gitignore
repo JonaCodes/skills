@@ -1,0 +1,13 @@
+# Ignore everything by default
+*
+
+# Keep gitignore itself tracked
+!.gitignore
+
+# Allow only public skills
+!ask-codex/
+!ask-codex/**
+
+# Later add more public skills explicitly:
+#!my-other-public-skill/
+#!my-other-public-skill/**
