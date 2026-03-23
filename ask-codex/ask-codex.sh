@@ -40,11 +40,13 @@ TMPFILE=$(mktemp)
 ERRFILE=$(mktemp)
 trap "rm -f $TMPFILE $ERRFILE" EXIT
 
+FULL_PROMPT="Task: $PROMPT. Note that you should never nitpick or overengineer. Keep things simple."
+
 codex exec --skip-git-repo-check \
   -m "$MODEL" \
   -c "model_reasoning_effort=\"$EFFORT\"" \
   --output-last-message "$TMPFILE" \
-  "$PROMPT" > /dev/null 2>"$ERRFILE" < /dev/null
+  "$FULL_PROMPT" > /dev/null 2>"$ERRFILE" < /dev/null
 
 EXIT_CODE=$?
 
