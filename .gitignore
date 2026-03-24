@@ -9,6 +9,8 @@
 !ask-codex/**
 !new-feature/
 !new-feature/**
+!update-md/
+!update-md/**
 
 # Later add more public skills explicitly:
 #!my-other-public-skill/
