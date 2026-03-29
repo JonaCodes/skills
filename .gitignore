@@ -3,6 +3,7 @@
 
 # Keep gitignore itself tracked
 !.gitignore
+!cp-skills
 
 # Allow only public skills
 !ask-codex/
@@ -15,3 +16,9 @@
 # Later add more public skills explicitly:
 #!my-other-public-skill/
 #!my-other-public-skill/**
+!feature-map-maintainer/
+!feature-map-maintainer/**
+!feature-map-init/
+!feature-map-init/**
+!map-guided-explorer/
+!map-guided-explorer/**

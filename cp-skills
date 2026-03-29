@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+SOURCE_DIR="${CP_SKILLS_SOURCE:-$HOME/.claude/skills}"
+TARGETS=(
+  "$HOME/.codex/skills"
+  "$HOME/.kiro/skills"
+  "$HOME/.gemini/antigravity/skills"
+)
+
+if [[ ! -d "$SOURCE_DIR" ]]; then
+  echo "Source skills directory not found: $SOURCE_DIR" >&2
+  exit 1
+fi
+
+copy_skill() {
+  local skill_dir="$1"
+  local target_root="$2"
+  local skill_name target_dir
+
+  skill_name="$(basename "$skill_dir")"
+  target_dir="$target_root/$skill_name"
+
+  mkdir -p "$target_root"
+  rm -rf "$target_dir"
+  cp -R "$skill_dir" "$target_dir"
+}
+
+echo "Copying skills from $SOURCE_DIR"
+
+for target_root in "${TARGETS[@]}"; do
+  echo "Target: $target_root"
+  for skill_dir in "$SOURCE_DIR"/*; do
+    [[ -d "$skill_dir" ]] || continue
+    [[ "$(basename "$skill_dir")" == .* ]] && continue
+    copy_skill "$skill_dir" "$target_root"
+  done
+done
+
+echo "Done."
