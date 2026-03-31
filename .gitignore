@@ -20,5 +20,5 @@
 !feature-map-maintainer/**
 !feature-map-init/
 !feature-map-init/**
-!map-guided-explorer/
-!map-guided-explorer/**
+!map-guided-exploration/
+!map-guided-exploration/**

@@ -8,11 +8,11 @@ description: Run Codex CLI with a prompt, letting Codex search through repo file
 1. Run `list-models.sh` to refresh the cache if needed, then read the cache file directly:
 
    ```bash
-   bash /Users/jona/.claude/skills/ask-codex/list-models.sh
+   bash /Users/jona/.claude/skills/ask-codex/scripts/list-models.sh
    ```
 
    ```
-   /Users/jona/.claude/skills/ask-codex/cached-codex-models.txt
+   /Users/jona/.claude/skills/ask-codex/assets/cached-codex-models.txt
    ```
 
    Use all non-comment lines (lines not starting with `#`) as the model list.
@@ -37,7 +37,7 @@ description: Run Codex CLI with a prompt, letting Codex search through repo file
 5. Run the script with the ARGUMENTS prompt, adding `--model` and `--effort` only for non-Auto selections:
 
    ```bash
-   bash /Users/jona/.claude/skills/ask-codex/ask-codex.sh "<prompt>" [--model MODEL] [--effort EFFORT]
+   bash /Users/jona/.claude/skills/ask-codex/scripts/ask-codex.sh "<prompt>" [--model MODEL] [--effort EFFORT]
    ```
 
 6. Check the exit code:

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Map Guided Explorer"
-  short_description: "Use feature maps to explore code"
-  default_prompt: "Use $map-guided-explorer to treat .ai/feature-map.yaml as the navigation entrypoint, starting from core_files and using supporting_files only when needed."
