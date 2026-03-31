@@ -4,6 +4,6 @@ description: Start a new feature
 disable-model-invocation: true
 ---
 
-Read `CLAUDE.md` as well as the files in `docs/` to understand the general project overview, as well as a techical overview.
+Read `CLAUDE.md` as well as the files in `docs/` to understand the general project overview, as well as a techical overview. Then, use `/map-guided-exploration` instead of your general explorer agents for repo exploration.
 
-Once you're done, here's what's next: $ARGUMENTS
+Once you're done, here's what the user wants: $ARGUMENTS
