@@ -1,4 +1,4 @@
 interface:
   display_name: "Feature Map Maintainer"
   short_description: "Keep the map in sync with staged diffs"
-  default_prompt: "Use $feature-map-maintainer to read the staged git diff, compare it to .ai/feature-map.yaml, and patch stale feature entries using core_files and supporting_files."
+  default_prompt: "Use $feature-map-maintainer to read the staged git diff, compare it to .ai/features-index.yaml plus .ai/features-details/, and patch only the stale feature entries using core_files and supporting_files."

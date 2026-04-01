@@ -1,4 +1,4 @@
 interface:
   display_name: "Map Guided Exploration"
   short_description: "Use the map plus cheap triage before reading code"
-  default_prompt: "Use $map-guided-exploration to select a loose candidate set from .ai/feature-map.yaml, send those files to dora-explorer for relevance triage, and only then read the shortlisted files yourself."
+  default_prompt: "Use $map-guided-exploration to select a loose candidate set from .ai/features-index.yaml plus the relevant .ai/features-details/<name>.yaml files, send those files to dora-explorer for relevance triage, and only then read the shortlisted files yourself."

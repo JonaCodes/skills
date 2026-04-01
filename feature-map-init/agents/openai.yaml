@@ -1,4 +1,4 @@
 interface:
   display_name: "Feature Map Init"
   short_description: "Bootstrap a feature map from seeds"
-  default_prompt: "Use $feature-map-init to validate .ai/feature-seeds.yaml, do a deeper scan of the repo, and create the initial .ai/feature-map.yaml with core_files and supporting_files for each feature."
+  default_prompt: "Use $feature-map-init to validate .ai/feature-seeds.yaml, do a deeper scan of the repo, and create .ai/features-index.yaml plus per-feature .ai/features-details/<name>.yaml files with core_files and supporting_files for each feature."

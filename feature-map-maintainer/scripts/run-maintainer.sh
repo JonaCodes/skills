@@ -14,16 +14,17 @@ trap 'rm -f "$TMPFILE" "$ERRFILE"' EXIT
 printf '\033[32mRunning maintainer with %s\033[0m\n' "$RUN_LABEL"
 
 PROMPT=$(cat <<'PROMPT_EOF'
-Task: In the target repository, maintain .ai/feature-map.yaml directly from staged git changes.
+Task: In the target repository, maintain .ai/features-index.yaml and .ai/features-details/ directly from staged git changes.
 
 Requirements:
-- Treat .ai/feature-map.yaml as the working source of truth.
+- Treat .ai/features-index.yaml and .ai/features-details/ as the working source of truth.
 - Read only staged changes using git diff --cached and git diff --cached --name-only.
 - If there are no staged changes, say no map update is needed and stop without editing files.
-- If .ai/feature-map.yaml is missing, explain that the map must exist before maintenance can run and exit non-zero.
-- Maintain each feature entry using this shape when relevant:
+- If .ai/features-index.yaml is missing, explain that the map must exist before maintenance can run and exit non-zero.
+- Each feature entry in .ai/features-index.yaml must contain only:
   - name
   - description
+- Each feature detail file in .ai/features-details/<name>.yaml must contain:
   - core_files
   - supporting_files
 - Use core_files for the files most directly responsible for the feature primary behavior.
@@ -32,7 +33,8 @@ Requirements:
 - Update only the affected map entries unless the staged diff clearly introduces a genuinely new feature area, in which case add a new top-level map entry.
 - Keep both file lists lean and high-signal.
 - If either list must exceed 5 files, keep the files and print a yellow warning line exactly as: Warning: feature list exceeds 5 files
-- Write changes directly to .ai/feature-map.yaml when needed.
+- Feature name is the canonical identifier and detail files are named exactly .ai/features-details/<name>.yaml.
+- Write changes directly to .ai/features-index.yaml and the relevant .ai/features-details/<name>.yaml files when needed.
 PROMPT_EOF
 )
 
@@ -51,8 +53,12 @@ if [[ $EXIT_CODE -ne 0 ]]; then
   exit $EXIT_CODE
 fi
 
-if [[ -f "$REPO_ROOT/.ai/feature-map.yaml" ]]; then
-  git -C "$REPO_ROOT" add .ai/feature-map.yaml
+if [[ -f "$REPO_ROOT/.ai/features-index.yaml" ]]; then
+  git -C "$REPO_ROOT" add .ai/features-index.yaml
+fi
+
+if [[ -d "$REPO_ROOT/.ai/features-details" ]]; then
+  git -C "$REPO_ROOT" add .ai/features-details
 fi
 
 while IFS= read -r line; do
