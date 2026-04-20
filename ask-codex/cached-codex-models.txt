@@ -1,4 +1,4 @@
-# updated: 2026-04-12
+# updated: 2026-04-19
 gpt-5.4: low, medium, high, xhigh
 gpt-5.4-mini: low, medium, high, xhigh
 gpt-5.3-codex: low, medium, high, xhigh
