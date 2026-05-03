@@ -12,6 +12,8 @@
 !new-feature/**
 !update-md/
 !update-md/**
+!double-cr
+!double-cr/**
 
 # Later add more public skills explicitly:
 #!my-other-public-skill/
