@@ -8,19 +8,20 @@
 # Allow only public skills
 !ask-codex/
 !ask-codex/**
-!new-feature/
-!new-feature/**
-!update-md/
-!update-md/**
+
+!project-context/
+!project-context/**
+
+!map-guided-exploration/
+!map-guided-exploration/**
+
 !double-cr
 !double-cr/**
 
-# Later add more public skills explicitly:
-#!my-other-public-skill/
-#!my-other-public-skill/**
+!update-docs/
+!update-docs/**
+
 !feature-map-maintainer/
 !feature-map-maintainer/**
 !feature-map-init/
 !feature-map-init/**
-!map-guided-exploration/
-!map-guided-exploration/**
