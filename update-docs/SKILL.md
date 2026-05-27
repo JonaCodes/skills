@@ -1,17 +1,40 @@
 ---
 name: update-docs
-description: Update docs and feature-index before comitting to github.
+description: Update docs and feature-index before committing to github.
 disable-model-invocation: true
 ---
 
-We've just finished making some changes. It's time to ensure our documentation is up to speed. This includes both the `docs` directory. and the `feature-index.yaml` + `feature-details` directory.
+We've just finished making changes. Ensure the documentation matches the current code and stays useful for future developers and agents.
 
-If you don't remember what changes we made, you may run `git status` and `git diff` to see what updates we've made. Do not look for the entire branch commit history.
+Start from `git status` and `git diff`. Do not inspect unrelated branch history.
 
-## Guidelines
+## Documentation model
 
-1. Do not bloat any markdown files
-2. The purpose of these files are to onboard future developers and agents - they needs to be lean but still useful
-3. The goal of this update is to align the docs to reflect the current state of the code
-4. It is possible that no or very minimal changes need to be made, depending on the changes
-5. If needed, create new markdown files or index entries. This is true both for separation of concerns, as well as avoiding bloat
+This repo has two documentation systems with different purposes:
+
+1. Markdown docs in `docs/`
+   - Explain why behavior exists, important gotchas, architectural context, and cross-repo orientation.
+   - Keep them lean. They are onboarding/orientation docs, not API references or implementation inventories.
+   - Avoid large code snippets, method lists, type dumps, or exhaustive file walkthroughs unless they are essential to understanding a gotcha.
+
+2. Feature map files in `.ai/`
+   - `.ai/features-index.yaml` lists distinct features with short names and concise descriptions.
+   - `.ai/features-details/<feature>.yaml` points to the main files for that feature.
+   - Detail files should list primary starting points, not every related file.
+   - A feature should be either a distinct user capability or a distinct automatic app/runtime behavior.
+
+## Update rules
+
+1. Start from `git status` and `git diff`; do not inspect unrelated branch history.
+2. Prefer no docs change when the existing docs already cover the behavior.
+3. Do not bloat markdown docs to document every implementation detail.
+4. If a markdown doc is getting broad, split by concern or route through `docs/index.md`.
+5. If feature descriptions are accumulating multiple behaviors, split the feature instead of writing a mega-feature.
+6. Keep `docs/index.md` as a router: short “if working on X, read Y” entries only.
+
+## Verification
+
+- markdown links resolve
+- every feature-index entry has a matching detail file
+- no orphaned feature detail files remain
+- listed feature detail paths exist

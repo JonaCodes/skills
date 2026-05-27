@@ -4,6 +4,8 @@
 # Keep gitignore itself tracked
 !.gitignore
 !cp-skills
+!cp-agents
+!cp-ccc
 
 # Allow only public skills
 !ask-codex/
