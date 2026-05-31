@@ -8,4 +8,4 @@ For starters, read the root `README.md` for general context, and the root `CLAUD
 
 For more detailed exploration, only if the repo has a `.ai/` directory at its root, read the `.ai/features-index.yaml` file to discern which actual code files are relevant, then go to the matching `.ai/features-details/`.
 
-If there is no `.ai/` directory, the docs themselves should have similar file pointers you can dive into.
+If there is no `.ai/` directory, the docs themselves should have similar file pointers you can dive into. Do not mention the fact that there is no `.ai/` directory - this is fine.
