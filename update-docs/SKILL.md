@@ -6,11 +6,9 @@ disable-model-invocation: true
 
 We've just finished making changes. Ensure the documentation matches the current code and stays useful for future developers and agents.
 
-Start from `git status` and `git diff`. Do not inspect unrelated branch history.
-
 ## Documentation model
 
-This repo has two documentation systems with different purposes:
+This repo has up to two documentation systems with different purposes:
 
 1. Markdown docs in `docs/`
    - Explain why behavior exists, important gotchas, architectural context, and cross-repo orientation.
@@ -31,6 +29,8 @@ This repo has two documentation systems with different purposes:
 4. If a markdown doc is getting broad, split by concern or route through `docs/index.md`.
 5. If feature descriptions are accumulating multiple behaviors, split the feature instead of writing a mega-feature.
 6. Keep `docs/index.md` as a router: short “if working on X, read Y” entries only.
+7. Split docs to subdirectories where relevant
+8. The projet may have `docs/` and optionally `.ai/` - not necessarily both; this is fine, update what you have
 
 ## Verification
 
@@ -38,3 +38,4 @@ This repo has two documentation systems with different purposes:
 - every feature-index entry has a matching detail file
 - no orphaned feature detail files remain
 - listed feature detail paths exist
+- Crucial: the docs should be current-status snapshots, not archive logs of what used to be
