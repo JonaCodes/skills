@@ -22,3 +22,4 @@ Spawn lean subagents without full-history fork; pass only the repo path, scope, 
 5. Ensure the code remains straightforward and not over-engineered
 6. Ensure the overall architecture is reasonable and appropriate
 7. Be brave: if a refactor is needed, say so clearly
+8. Ensure the code adheres to the `CODING_GUIDELINES.md`
