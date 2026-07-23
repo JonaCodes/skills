@@ -14,19 +14,11 @@
 !project-context/
 !project-context/**
 
-!map-guided-exploration/
-!map-guided-exploration/**
-
 !double-cr
 !double-cr/**
 
 !update-docs/
 !update-docs/**
-
-!feature-map-maintainer/
-!feature-map-maintainer/**
-!feature-map-init/
-!feature-map-init/**
 
 !implement/
 !implement/**
