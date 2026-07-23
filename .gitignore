@@ -14,11 +14,17 @@
 !project-context/
 !project-context/**
 
+!implement/
+!implement/**
+
 !double-cr
 !double-cr/**
 
 !update-docs/
 !update-docs/**
 
-!implement/
-!implement/**
+!wt-wrapup/
+!wt-wrapup/**
+
+!wt-cleanup/
+!wt-cleanup/**
