@@ -4,8 +4,12 @@ description: Get the relevant context of the project before diving into planning
 disable-model-invocation: true
 ---
 
-For starters, read the root `README.md` for general context, and the root `CLAUDE.md` as well. Based on the request, find the relevant docs to read by reading `docs/index.md` and branching out from there.
+For starters, read the following root files for general context, if they exist:
 
-For more detailed exploration, only if the repo has a `.ai/` directory at its root, read the `.ai/features-index.yaml` file to discern which actual code files are relevant, then go to the matching `.ai/features-details/`.
+- `README.md`
+- `CLAUDE.md`
+- `AGENT.md` or `AGENTS.md`
 
-If there is no `.ai/` directory, the docs themselves should have similar file pointers you can dive into. Do not mention the fact that there is no `.ai/` directory - this is fine.
+Then read `docs/index.md` and branch out from there based on the user's request.
+
+These markdown files in `docs/` give a general overview of the features/flows in this project, which you will need to complete the user's request. The docs point to actual code files, so read the relevant docs and code files that are relevant to the request.
