@@ -1,0 +1,7 @@
+interface:
+  display_name: "Implement"
+  short_description: "Manage subagents through an implementation task"
+  default_prompt: "Use $implement to coordinate the agents needed to implement this task."
+
+policy:
+  allow_implicit_invocation: false

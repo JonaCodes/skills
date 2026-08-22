@@ -1,0 +1,7 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Create a lean prompt for the next implementation agent"
+  default_prompt: "Use $handoff to write a context-rich prompt for a new agent to begin the first implementation phase."
+
+policy:
+  allow_implicit_invocation: false

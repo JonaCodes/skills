@@ -1,0 +1,7 @@
+interface:
+  display_name: "Initialize Repo Docs"
+  short_description: "Set up documentation for a new code repository"
+  default_prompt: "Use $init-repo-docs to guide the initial documentation setup for this repository."
+
+policy:
+  allow_implicit_invocation: false

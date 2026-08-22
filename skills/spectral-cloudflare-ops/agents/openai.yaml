@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spectral Cloudflare Ops"
+  short_description: "Safely manage Spectral Cloudflare resources"
+  default_prompt: "Use $spectral-cloudflare-ops to inspect or safely update Spectral Cloudflare resources."

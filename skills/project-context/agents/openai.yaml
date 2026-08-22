@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Context"
+  short_description: "Load relevant project docs before planning or implementation"
+  default_prompt: "Use $project-context to gather the relevant project context before planning or implementation."

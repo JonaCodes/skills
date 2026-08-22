@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Docs"
+  short_description: "Update repository docs after a completed code change"
+  default_prompt: "Use $update-docs to review and update this repository's documentation after the code changes are complete."

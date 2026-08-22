@@ -1,0 +1,7 @@
+interface:
+  display_name: "Multi-Phase Plan"
+  short_description: "Plan the implementation as verifiable end-to-end phases"
+  default_prompt: "Use $multi-phase-plan to create a codebase-grounded plan with independently verifiable phases."
+
+policy:
+  allow_implicit_invocation: false

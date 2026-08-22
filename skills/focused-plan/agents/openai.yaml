@@ -1,0 +1,7 @@
+interface:
+  display_name: "Focused Plan"
+  short_description: "Plan the implementation in a practical manner"
+  default_prompt: "Use $focused-plan to create a codebase-grounded plan, breaking the goal into meaningful steps."
+
+policy:
+  allow_implicit_invocation: false

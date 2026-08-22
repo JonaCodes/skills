@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Cleanup"
+  short_description: "Safely clean up a completed Git worktree"
+  default_prompt: "Use $wt-cleanup to safely remove the completed worktree after its changes are pushed."

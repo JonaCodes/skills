@@ -1,0 +1,7 @@
+interface:
+  display_name: "Brainstorm"
+  short_description: "Explore product and architecture ideas through focused questions"
+  default_prompt: "Use $brainstorm to ask meaningful product and architecture questions about this idea without planning or implementing it."
+
+policy:
+  allow_implicit_invocation: false

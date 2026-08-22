@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask Codex"
+  short_description: "Run Codex CLI prompts against repository files"
+  default_prompt: "Use $ask-codex to run a Codex CLI prompt after choosing a model."

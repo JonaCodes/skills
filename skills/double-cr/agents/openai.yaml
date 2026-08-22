@@ -1,0 +1,7 @@
+interface:
+  display_name: "Double CR"
+  short_description: "Review changes with multiple focused subagents"
+  default_prompt: "Use $double-cr to review the current changes with focused subagents."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,85 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/block-sensitive-file-access.sh",
+            "statusMessage": "Sensitive file verification",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/enforce-manual-only-skill-read.sh",
+            "statusMessage": "Manual-only skill verification",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/record-explicit-skill-invocations.sh",
+            "statusMessage": "Skill invocation tracking",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^apply_patch$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/format-after-apply-patch.sh",
+            "statusMessage": "File formatting",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/check-file-length-stop.sh",
+            "statusMessage": "File length verification",
+            "timeout": 20
+          },
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/check-time-handling-stop.sh",
+            "statusMessage": "Time-stamp handling verification",
+            "timeout": 20
+          },
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/check-tests.sh",
+            "statusMessage": "pnpm check",
+            "timeout": 60
+          },
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/cleanup-manual-only-skill-state.sh",
+            "statusMessage": "Skill state cleanup",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "/Users/jona/.codex/hooks/play-jobs-done-if-codex-unfocused.sh",
+            "statusMessage": "Jobs-done notification",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

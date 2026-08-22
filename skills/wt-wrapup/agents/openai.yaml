@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Wrapup"
+  short_description: "Wrap up an approved implementation worktree"
+  default_prompt: "Use $wt-wrapup to wrap up this worktree after implementation and review are approved."
