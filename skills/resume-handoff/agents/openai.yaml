@@ -1,0 +1,7 @@
+interface:
+  display_name: "Resume Handoff"
+  short_description: "Continue work from a saved handoff prompt"
+  default_prompt: "Use $resume-handoff to continue work from the next saved handoff."
+
+policy:
+  allow_implicit_invocation: false
